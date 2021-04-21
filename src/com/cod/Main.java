@@ -1,11 +1,19 @@
 package com.cod;
 
 public class Main {
-public static void main(String[] args) {if (metodo1("pepe@danielcastelao.org")) {System.out.println("Listo");} else {
-System.out.println("Fallo");}
-if(metodo2()) {
-System.out.println("Listo");
-} else {System.out.println("Fallo");};}
+public static void main(String[] args) {
+  if (metodo1("pepe@danielcastelao.org")) {
+    System.out.println("Listo");
+  }
+  else {
+    System.out.println("Fallo");
+  }
+  if(metodo2()) {
+    System.out.println("Listo");
+  }
+  else {System.out.println("Fallo");
+  }
+}
 
 public static boolean metodo1(String u){
 Auxiliar obx1 = new Auxiliar(u);
