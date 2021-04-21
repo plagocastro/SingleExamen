@@ -1,26 +1,29 @@
 package com.cod;
 
 public class Main {
-public static void main(String[] args) {
-  if (metodo1("pepe@danielcastelao.org")) {
-    System.out.println("Listo");
+  public static void main(String[] args) {
+      if (conexion("pepe@danielcastelao.org")) {
+      System.out.println("Listo");
+    }
+    else {
+      System.out.println("Fallo");
+    }
+    if(conexion2()) {
+      System.out.println("Listo");
+    }
+    else {System.out.println("Fallo");
+    }
   }
-  else {
-    System.out.println("Fallo");
+
+  public static boolean conexion(String Direccion){
+    Comparacion enlace1 = new Comparacion(Direccion);
+    System.out.println("Conectando a " + enlace1.ip + ", con el usuario " + Direccion);
+    return enlace1.diferenciar();
   }
-  if(metodo2()) {
-    System.out.println("Listo");
-  }
-  else {System.out.println("Fallo");
+
+  public static boolean conexion2() {
+    Comparacion enlace2 = new Comparacion();
+    System.out.println("Conectando a " + enlace2.ip + ", con el usuario " + enlace2.Direccion);
+    return enlace2.diferenciar();
   }
 }
-
-public static boolean metodo1(String u){
-Auxiliar obx1 = new Auxiliar(u);
-System.out.println("Conectando a " + obx1.h + ", con el usuario " + u);
-return obx1.con();}
-
-public static boolean metodo2() {
-Auxiliar obx2 = new Auxiliar();
-System.out.println("Conectando a " + obx2.h + ", con el usuario " + obx2.e);
-  return obx2.con();}}
